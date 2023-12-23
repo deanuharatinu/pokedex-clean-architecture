@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pokemon_list_navigation"
+    app:startDestination="@id/navigation_pokemon_list">
+
+    <fragment
+        android:id="@+id/navigation_pokemon_list"
+        android:name="com.deanuharatinu.pokemonlist.ui.view.PokemonListFragment"
+        android:label="Pokemon List"
+        tools:layout="@layout/fragment_pokemon_list" />
+
+</navigation>
