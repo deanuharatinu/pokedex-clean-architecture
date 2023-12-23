@@ -1,4 +1,4 @@
-package com.deanuharatinu.pokedexcleanarchitecture.infra.cleanarchitecture.viewmodel
+package com.deanuharatinu.common.infra.viewmodel
 
 import androidx.lifecycle.ViewModel
 

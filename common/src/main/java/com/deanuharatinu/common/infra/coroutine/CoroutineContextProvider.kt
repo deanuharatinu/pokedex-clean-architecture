@@ -1,4 +1,4 @@
-package com.deanuharatinu.pokedexcleanarchitecture.infra.cleanarchitecture.coroutine
+package com.deanuharatinu.common.infra.coroutine
 
 import kotlin.coroutines.CoroutineContext
 

@@ -17,3 +17,4 @@ rootProject.name = "Pokedex Clean Architecture"
 include(":app")
 include(":feature:pokemonlist")
 include(":feature:favorite")
+include(":common")
