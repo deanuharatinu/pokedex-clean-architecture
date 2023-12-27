@@ -1,7 +1,8 @@
 package com.deanuharatinu.pokemonlist.domain.repository
 
-import com.deanuharatinu.pokemonlist.domain.model.PokemonDomainModel
+import com.deanuharatinu.common.infra.domain.Resource
+import com.deanuharatinu.pokemonlist.domain.model.PokemonResultDomainModel
 
 fun interface PokemonRepository {
-    fun pokemons(): List<PokemonDomainModel>
+    fun pokemonList(): Resource<PokemonResultDomainModel>
 }
