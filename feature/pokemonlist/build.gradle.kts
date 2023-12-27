@@ -36,6 +36,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":common"))
+
     implementation(libs.core.androidx.ktx)
     implementation(libs.core.appcompat)
     implementation(libs.core.material)
@@ -46,6 +48,11 @@ dependencies {
     implementation(libs.navigation.ui.ktx)
 
     testImplementation(libs.test.junit)
+    testImplementation(libs.test.mock.web.server)
+    testImplementation(libs.test.mock.core)
+    testImplementation(libs.test.turbine)
+    testImplementation(libs.test.mockito.kotlin)
+    testImplementation(libs.test.mockito.inline)
     androidTestImplementation(libs.android.test.ext.junit)
     androidTestImplementation(libs.android.test.espresso.core)
 }
