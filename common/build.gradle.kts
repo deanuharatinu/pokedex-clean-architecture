@@ -6,10 +6,10 @@ plugins {
 
 android {
     namespace = "com.deanuharatinu.common"
-    compileSdk = 34
+    compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
-        minSdk = 24
+        minSdk = libs.versions.minSdk.get().toInt()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -29,15 +29,20 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = libs.versions.jvmTarget.get()
     }
 }
 
 dependencies {
-
     implementation(libs.core.androidx.ktx)
     implementation(libs.core.appcompat)
-    implementation(libs.core.material)
+
+    implementation(libs.network.retrofit)
+    implementation(libs.network.moshi.kotlin)
+    implementation(libs.network.converter.moshi)
+    implementation(libs.network.okhttp)
+    implementation(libs.network.logging.interceptor)
+
     testImplementation(libs.test.junit)
     androidTestImplementation(libs.android.test.ext.junit)
     androidTestImplementation(libs.android.test.espresso.core)
