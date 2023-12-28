@@ -6,11 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.deanuharatinu.feature.pokemonlist.databinding.FragmentPokemonListBinding
+import com.deanuharatinu.pokemonlist.presentation.viewmodel.PokemonListViewModel
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-class PokemonListFragment : Fragment() {
+class PokemonListFragment(
+    private val viewModel: PokemonListViewModel,
+) : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
     private lateinit var binding: FragmentPokemonListBinding
@@ -33,12 +36,13 @@ class PokemonListFragment : Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            PokemonListFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+        fun newInstance(
+            viewModel: PokemonListViewModel
+        ) = PokemonListFragment(viewModel).apply {
+            arguments = Bundle().apply {
+                putString(ARG_PARAM1, param1)
+                putString(ARG_PARAM2, param2)
             }
+        }
     }
 }
