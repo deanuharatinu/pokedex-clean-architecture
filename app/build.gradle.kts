@@ -39,6 +39,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":common"))
     implementation(project(":feature:pokemonlist"))
     implementation(project(":feature:favorite"))
 
