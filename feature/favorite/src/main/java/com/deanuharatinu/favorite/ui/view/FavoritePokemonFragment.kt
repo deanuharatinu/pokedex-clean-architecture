@@ -11,11 +11,7 @@ import com.deanuharatinu.favorite.databinding.FragmentFavoritePokemonBinding
 import com.deanuharatinu.favorite.presentation.viewmodel.FavoritePokemonViewModel
 
 class FavoritePokemonFragment : Fragment() {
-
     private var _binding: FragmentFavoritePokemonBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -43,5 +39,10 @@ class FavoritePokemonFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    companion object {
+        @JvmStatic
+        fun newInstance() = FavoritePokemonFragment()
     }
 }
